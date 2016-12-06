@@ -1,0 +1,19 @@
+{
+  "name": "hrsf50-mvp",
+  "version": "1.0.0",
+  "description": "Fridge App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrJonWu/hrsf50-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrJonWu/hrsf50-mvp/issues"
+  },
+  "homepage": "https://github.com/MrJonWu/hrsf50-mvp#readme"
+}

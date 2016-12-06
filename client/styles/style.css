@@ -1,0 +1,56 @@
+body {
+  font-family: 'Cutive Mono', monospace;
+  color: #3e3e3e;
+  margin: 0;
+}
+
+.foodForm {
+  width: 100%;
+}
+.banner {
+  margin: 0;
+  padding: 0;
+  /*padding-bottom: : 50px;*/
+  background: #ECECEC;
+}
+.banner h1 {
+  margin: 0;
+  line-height: 120px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.foodForm {
+  text-align: center;
+}
+
+.food-table table{
+
+  text-align: center;
+  width: 50%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border: 2px solid #ECECEC;
+  font-size: 20px;
+}
+
+.food-table caption {
+  font-size: 30px;
+}
+
+.food-table tr:hover {
+  background-color: #ECECEC;
+  cursor: pointer;
+}
+
+.food-table tr:first-child:hover {
+  background-color: white;
+}
+
+.food-recipes {
+  text-align: center;
+}
+
+.recipes img {
+  border-radius: 10px;
+}
