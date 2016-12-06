@@ -4,6 +4,14 @@ body {
   margin: 0;
 }
 
+.recipes h1 {
+  font-size: 50px;
+}
+
+.recipes h2 {
+  font-size: 30px;
+}
+
 .foodForm {
   width: 100%;
 }
@@ -25,7 +33,6 @@ body {
 }
 
 .food-table table{
-
   text-align: center;
   width: 50%;
   margin: 30px auto;
@@ -36,6 +43,32 @@ body {
 
 .food-table caption {
   font-size: 30px;
+}
+
+label {
+  font-size: 25px;
+}
+
+input[type="text"], input[type="date"] {
+  width: 200px;
+  height: 25px;
+  font-size: 20px;
+  font-family: 'Cutive Mono', monospace;
+}
+
+button {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 30px;
+  margin-top: 30px;
+  width: 25%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background: #ECECEC;
+}
+
+button:hover {
+  background: orange;
 }
 
 .food-table tr:hover {
