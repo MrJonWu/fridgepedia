@@ -46,11 +46,13 @@
           <tr>
             <th ng-click="sortType = 'item'">Item</th>
             <th ng-click="sortType = 'utc'">Expiration</th>
+            <th>Status</th>
             <th>Trash</th>
           </tr>
-          <tr class="notFirst" ng-repeat="food in fridge | orderBy:sortType track by $index">
+          <tr class="notFirst" ng-repeat="food in fridge | orderBy:(sortType || 'utc') track by $index">
             <td ng-click="findRecipe(food.item)">{{food.item}}</td>
             <td>{{food.expiration}}</td>
+            <td><img ng-src="{{food.status}}"></img></td>
             <td><img src="../assets/trash.png" ng-click="trash(food._id)"></img></td>
           </tr>
         </table>

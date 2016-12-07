@@ -71,6 +71,10 @@ button:hover {
   background: orange;
 }
 
+.food-table th {
+  font-size: 25px;
+}
+
 .food-table tr:hover {
   background-color: #ECECEC;
   cursor: pointer;

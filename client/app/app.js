@@ -9,12 +9,20 @@ angular.module('app', [])
   $scope.recipe = {};
   $scope.food = {};
   $scope.food.expiration = new Date(yyyy, mm, dd);
+  var todayUTC = $scope.food.expiration.getTime();
 
   $scope.fridge = [];
 
   $http.get('/api/fridge')
   .then(function(data) {
     $scope.fridge = data.data;
+    for (var i = 0; i < $scope.fridge.length; i++) {
+      if ($scope.fridge[i].utc < todayUTC) {
+        $scope.fridge[i].status = '../assets/danger.png';
+      } else {
+        $scope.fridge[i].status = '../assets/safe.png';
+      }
+    }
   });
 
   $scope.submit = function() {
@@ -30,6 +38,13 @@ angular.module('app', [])
         $http.get('/api/fridge')
           .then(function(data) {
             $scope.fridge = data.data;
+            for (var i = 0; i < $scope.fridge.length; i++) {
+              if ($scope.fridge[i].utc < todayUTC) {
+                $scope.fridge[i].status = '../assets/danger.png';
+              } else {
+                $scope.fridge[i].status = '../assets/safe.png';
+              }
+            }
           });
       });
   };
@@ -52,6 +67,17 @@ angular.module('app', [])
     $http.delete('/api/fridge/' + id)
       .then(function(data) {
         $scope.fridge = data.data;
+        $http.get('/api/fridge')
+          .then(function(data) {
+            $scope.fridge = data.data;
+            for (var i = 0; i < $scope.fridge.length; i++) {
+              if ($scope.fridge[i].utc < todayUTC) {
+                $scope.fridge[i].status = '../assets/danger.png';
+              } else {
+                $scope.fridge[i].status = '../assets/safe.png';
+              }
+            }
+          });
       });
   };
 });
