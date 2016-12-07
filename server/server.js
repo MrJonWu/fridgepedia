@@ -50,6 +50,24 @@ app.post('/api/fridge', function(req, res) {
   });
 });
 
+app.delete('/api/fridge/:fridge_id', function(req, res) {
+  Fridge.remove({
+    _id: req.params.fridge_id
+  }, function(err, fridge) {
+    if (err) {   
+      res.send(err);
+    }
+
+      // get and return all the todos after you create another
+    Fridge.find(function(err, fridge) {
+      if (err) {
+        res.send(err);     
+      }
+      res.json(fridge);
+    });
+  });
+});
+
 // app.delete('/api/', function(req, res) {
 
 // });

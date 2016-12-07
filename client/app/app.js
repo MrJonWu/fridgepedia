@@ -47,4 +47,11 @@ angular.module('app', [])
       }
     });
   };
+
+  $scope.trash = function(id) {
+    $http.delete('/api/fridge/' + id)
+      .then(function(data) {
+        $scope.fridge = data.data;
+      });
+  };
 });
