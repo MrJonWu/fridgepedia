@@ -1,9 +1,9 @@
 # Fridgepedia #
 
 <p align="center">
-  <img src="./examples/sample.png">
+  <img src="./examples/sample.jpg">
   
-  <img src="./examples/recipes.png">
+  <img src="./examples/recipes.jpg">
 </p>
 
   Anyone with a refridgerator can use this app to track the expiration dates of their food.
