@@ -1,10 +1,11 @@
-# Project Name #
-  Fridgepedia
- 
-## Heading ##
-  Fridgepedia
+# Fridgepedia #
 
-## Sub-Heading ##
+<p align="center">
+  <img src="./examples/sample.png">
+  
+  <img src="./examples/recipes.png">
+</p>
+
   Anyone with a refridgerator can use this app to track the expiration dates of their food.
 
 ## Summary ##
@@ -16,7 +17,6 @@
 ## Solution ##
   User gets recommended recipes to remind the user to consume their food before it spoils
 
-## Quote from You ##
   Best thing since sliced bread, unless you're gluten intolerant.
 
 ## How to Get Started ##
